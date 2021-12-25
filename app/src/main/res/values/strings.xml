@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">tubesandroid</string>
+    <string name="api_kucing">https://api.thecatapi.com/v1/images/search</string>
+</resources>
