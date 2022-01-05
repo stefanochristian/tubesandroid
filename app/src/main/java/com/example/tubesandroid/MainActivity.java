@@ -17,6 +17,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.squareup.picasso.Picasso;
 
@@ -26,7 +27,7 @@ import org.json.JSONObject;
 
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = "TAG";
-    FloatingActionButton infoBtn,downloadBtn,refreshBtn;
+    FloatingActionButton infoBtn,downloadBtn,refreshBtn,favoriteBtn;
     ImageView catImageView;
 
     @Override
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         infoBtn = findViewById(R.id.infoBtn);
         downloadBtn = findViewById(R.id.downloadBtn);
         refreshBtn = findViewById(R.id.refreshBtn);
+        favoriteBtn = findViewById(R.id.favoriteBtn);
 
         catImageView = findViewById(R.id.kucing);
 
@@ -49,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+//        BottomNavigationView btnNav = findViewById(R.id.bottomNavigationView);
 
 
 
@@ -105,6 +107,12 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                     });
+                favoriteBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        openFavorite();
+                    }
+                });
 
 
                 } catch (JSONException e) {
@@ -122,5 +130,9 @@ public class MainActivity extends AppCompatActivity {
 
         queue.add(arrayRequest);
 
+    }
+    public void openFavorite(){
+        Intent intent=new Intent(this, favorites.class);
+        startActivity(intent);
     }
 }
