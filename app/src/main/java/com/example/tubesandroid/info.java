@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.squareup.picasso.Picasso;
 
 public class info extends Activity {
+
     ImageView catImage;
     TextView catName,catOrigin,catDesc,catTemp;
     Button wikiInfo,moreInfo;
