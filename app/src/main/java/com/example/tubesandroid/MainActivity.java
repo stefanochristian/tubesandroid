@@ -28,8 +28,8 @@ import org.json.JSONObject;
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = "TAG";
     FloatingActionButton infoBtn,downloadBtn,refreshBtn,favoriteBtn;
-    ImageView catImageView;
-
+    ImageView catImageView,imageView;
+public int status;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
         downloadBtn = findViewById(R.id.downloadBtn);
         refreshBtn = findViewById(R.id.refreshBtn);
         favoriteBtn = findViewById(R.id.favoriteBtn);
+        imageView = findViewById(R.id.imageView);
 
         catImageView = findViewById(R.id.kucing);
 
@@ -48,12 +49,28 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 getImage(getResources().getString(R.string.api_kucing));
+
+                if(status == 1){
+                    imageView.setImageResource(R.drawable.ic_baseline_favorite_24_blacky);
+                    status=0;
+                }
             }
         });
 
 //        BottomNavigationView btnNav = findViewById(R.id.bottomNavigationView);
+    imageView.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
 
-
+            if(status == 0){
+                imageView.setImageResource(R.drawable.ic_baseline_favorite_24);
+                status=1;
+            }else{
+                imageView.setImageResource(R.drawable.ic_baseline_favorite_24_blacky);
+                status=0;
+            }
+        }
+    });
 
     }
 
