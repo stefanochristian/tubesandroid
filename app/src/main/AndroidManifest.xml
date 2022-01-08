@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Tubesandroid">
         <activity
+            android:name=".search"
+            android:exported="false" />
+        <activity
             android:name=".favorites"
             android:exported="false" />
         <activity
