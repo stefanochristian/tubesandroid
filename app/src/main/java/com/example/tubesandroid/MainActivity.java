@@ -124,6 +124,7 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                     });
+
                     favoriteBtn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View view) {
@@ -135,8 +136,6 @@ public class MainActivity extends AppCompatActivity {
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
-
             }
         }, new Response.ErrorListener() {
             @Override
