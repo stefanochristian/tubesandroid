@@ -73,6 +73,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        searchBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openSearch();
+            }
+        });
+
     }
 
     public void getImage(String url) {
