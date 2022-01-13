@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">tubesandroid</string>
     <string name="api_kucing">https://api.thecatapi.com/v1/images/search</string>
-    <string name="api_search">https://api.thecatapi.com/v1/breeds/search?api_key=7b54483ff7494ac3bf0697469d9a782b</string>
+<!--    <string name="api_search">https://api.thecatapi.com/v1/breeds/search?api_key=7b54483ff7494ac3bf0697469d9a782b</string>-->
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

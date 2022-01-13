@@ -91,15 +91,15 @@ public class search extends AppCompatActivity implements RecyclerViewClickInterf
             public void onResponse(JSONArray response) {
                 ///Log.d(TAG, "onResponse: " + response.toString());
                 try {
-                    for(int i=0;i<response.length();i++) {
+                    for (int i = 0; i < response.length(); i++) {
                         JSONObject kucingData = response.getJSONObject(i);
                         String name = kucingData.getString("name");
                         JSONObject image;
                         String url;
-                        try{
+                        try {
                             image = kucingData.getJSONObject("image");
                             url = image.getString("url");
-                        }catch (JSONException e) {
+                        } catch (JSONException e) {
                             continue;
                         }
 
